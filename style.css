@@ -81,6 +81,7 @@ h3 {
 
 .logo h1 {
     font-size: 4rem;
+    color: gray;
 }
 
 .cart svg {
@@ -126,7 +127,7 @@ h3 {
 
 .nav__link:link,
 .nav__link:visited {
-    color: var(--dark-color);
+    color: gray;
     padding: 1rem;
 }
 
@@ -242,18 +243,23 @@ h3 {
     line-height: 1.5;
     letter-spacing: 1px;
     margin-bottom: 2.5rem;
+    color:gray;
+    
 }
 
 .button {
     display: inline-block;
     text-transform: uppercase;
     font-weight: 500;
+    background-color: lightgrey;
+    padding: 1.2rem 4rem;
+    border-radius:15px
 }
 
 .hero__btn {
     color: var(--white);
     padding: 1.2rem 4rem;
-    background-color: var(--default);
+    background-color: lightgrey;
 }
 
 .go-down svg {
@@ -363,6 +369,7 @@ h3 {
 .title {
     text-align: center;
     margin-bottom: 7rem;
+    color: gray;
 }
 
 .title h1 {
@@ -491,7 +498,7 @@ h3 {
     }
 }
 
-/* Category */
+/* Recomendados de la casa */
 
 .category__center {
     display: grid;
@@ -527,7 +534,7 @@ h3 {
 }
 
 .category .category__btn {
-    background-color: var(--default);
+    background-color: gray;
     padding: 1rem 3rem;
     color: var(--white);
     border-radius: 5rem;
@@ -567,7 +574,7 @@ h3 {
     }
 
     .category .category__btn {
-        background-color: var(--default);
+        background-color: gray;
         font-size: 1.4rem;
         padding: 1rem 2rem;
         color: var(--white);
@@ -575,12 +582,12 @@ h3 {
 }
 
 
-/* Contact */
+/* Contacto */
 
 .contact {
     display: flex;
     align-items: center;
-    background-color: var(--black);
+    background-color: black;
     padding: 6rem;
     margin: 5rem auto;
 }
@@ -591,7 +598,7 @@ h3 {
 }
 
 .contact__left {
-    color: var(--white);
+    color: white;;
 }
 
 .contact__left h1 {
@@ -625,11 +632,11 @@ h3 {
     top: 50%;
     right: .5rem;
     transform: translate(0%, -50%);
-    background-color: var(--default);
+    background-color: gray;
     padding: 1rem 3rem;
     border-radius: 1rem;
     color: var(--white);
-    border: 1px solid var(--default);
+    border: 1px solid black;
     transition: all 300ms ease-in-out;
 }
 
@@ -690,48 +697,6 @@ h3 {
     }
 }
 
-/* ============ Footer ============ */
-
-.footer {
-    padding: 6rem 1rem;
-    line-height: 3rem;
-    border-top: 1px solid var(--primaryColor);
-    background-color: var(--primaryColor);
-}
-
-.footer-top__box span svg {
-    width: 1.6rem;
-    height: 1.6rem;
-}
-
-.footer-top__box span {
-    margin-right: 1rem;
-}
-
-.footer__top {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    color: var(--dark-color);
-}
-
-.footer-top__box a:link,
-.footer-top__box a:visited {
-    display: block;
-    color: var(--dark-color);
-    font-size: 1.4rem;
-}
-
-
-.footer-top__box div {
-    color: var(--dark-color);
-    font-size: 1.4rem;
-}
-
-.footer-top__box h3 {
-    font-size: 1.8rem;
-    font-weight: 400;
-    margin-bottom: 1rem;
-}
 
 @media only screen and (max-width: 998px) {
     .footer__top {
