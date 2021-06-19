@@ -17,7 +17,7 @@
 html {
     scroll-behavior: smooth;
     box-sizing: border-box;
-    font-size: 62.5%;
+    font-size: 61.5%;
 }
 
 body,
@@ -36,11 +36,13 @@ img {
 
 a {
     text-decoration: none;
+    
 }
 
 ul,
 li {
     list-style: none;
+    padding:10px;
 }
 
 h2,
@@ -112,7 +114,10 @@ h3 {
 
 .nav__list {
     display: flex;
-    width: 80%;
+    width: 50%;
+    font-size: 1.5rem;
+    
+    
 }
 
 .nav__item:last-child {
@@ -121,7 +126,7 @@ h3 {
 
 .button {
     display: inline-block;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 500;
 }
 
@@ -139,7 +144,7 @@ h3 {
 @media only screen and (max-width: 768px) {
 
     .nav__menu {
-        padding: 0 2rem;
+        padding: 1rem;
     }
 
     .nav__list {
@@ -167,7 +172,7 @@ h3 {
     .nav__link:link,
     .nav__link:visited {
         display: block;
-        font-size: 2rem;
+        font-size: 1rem;
     }
 
     .hamburger {
@@ -253,19 +258,19 @@ h3 {
     font-weight: 500;
     background-color: lightgrey;
     padding: 1.2rem 4rem;
-    border-radius:15px
+    border-radius:20px;
 }
 
 .hero__btn {
-    color: var(--white);
-    padding: 1.2rem 4rem;
+    color: white;
+    padding: 1rem 2rem;
     background-color: lightgrey;
 }
 
 .go-down svg {
     width: 3rem;
     height: 3rem;
-    fill: var(--white);
+    fill: white;;
 }
 
 .go-down {
@@ -337,7 +342,7 @@ h3 {
     }
 
     .hero__left p {
-        font-size: 1.5rem;
+        font-size: 4rem;
     }
 
     .hero__btn {
@@ -710,4 +715,8 @@ h3 {
         grid-template-columns: 1fr;
         row-gap: 2rem;
     }
+}
+
+ul li a{
+padding:10px;
 }
