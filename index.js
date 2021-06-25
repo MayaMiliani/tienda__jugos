@@ -1,23 +1,5 @@
-
-//Consigna CREA UN ELEMENTO MANIPULANDO EL DOM
-let hero__left = document.getElementsByClassName('hero__left')[0];
-
-let parrafo = document.createElement('p');
-
-parrafo.textContent = "Relaja el cuerpo con jugo fresco"
-
-hero__left.appendChild(parrafo);
-
-
-//Consigna MOFIDICA ETIQUETAS EXISTENTES
-const inicio = document.querySelector('.Inicio')
-
-
-inicio.textContent = "Home"
-
-
 //Variables del proyecto
-const addToCartButtons= document.getElementsByClassName('category__btn');
+const addToCartButtons = document.getElementsByClassName('category__btn');
 let cartContainer = document.getElementsByTagName('tbody')[0];
 let quantityFields = document.getElementsByClassName('num');
 let delete_buttons = document.getElementsByClassName('uk-button-danger');
@@ -32,4 +14,21 @@ for (let i = 0; i < addToCartButtons.length; i++) {
 
 //Funcion para agregar al carrito
 
+function addToCart(event){
 
+
+let itemContainer = document.createElement('tr')
+console.log(itemContainer)
+let btn = event.target
+console.log(btn)
+
+}
+
+// Consigna agregar Eventos al proyecto (Clasde de Eventos)
+
+// for (let i = 0; i <addToCartButtons.length; i++) {
+//     addToCartButtons[i].addEventListener('click', ()=>{
+
+//         console.log('Me has hecho click')
+//     })
+// }
