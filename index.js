@@ -1,50 +1,53 @@
-//Variables del proyecto
-const addToCartButtons = document.getElementsByClassName('category__btn'); // Todos los botones
-let cartContainer = document.getElementsByTagName('tbody')[0]; // Seccion del carrito
-let quantityFields = document.getElementsByClassName('num'); //Accediendo a la cantidad del producto
-let delete_buttons = document.getElementsByClassName('uk-button-danger'); //Opcion para eliminar productos del carro
+//Variables de la pagina
+
+let addToCartButtons = document.getElementsByClassName('category__btn');
+let cartContainer = document.getElementsByTagName('tbody')[0];
+let removeButton = document.getElementsByClassName('uk-button-danger');
+let quantityFields = document.getElementsByClassName('num');
 
 
-//Evento click a cada boton que tenga la opcion 'Comprar'
+//Recorriendo todos los botones que tengan la opcion de añadir al carrito 
 
-for (let i = 0; i < addToCartButtons.length; i++) {
+for( let i = 0; i < addToCartButtons.length; i++ ) {
     addToCartButtons[i].addEventListener('click', addToCart)
- 
+
 };
 
-//Funcion para agregar productos al carrito
 
-function addToCart(event){
+//Funcion para ir agregando productos al carro
 
-localStorage.setItem('productName', itenName);
-localStorage.setItem('productPrice', itemPrice);
+function addToCart(e){
 
 let itemContainer = document.createElement('tr')
+let infoClick = e.target
+console.log(infoClick)
+let infoParent = infoClick.parentElement;
+console.log(infoParent)
+let infoGrandParent = infoClick.parentElement.parentElement
+console.log(infoGrandParent)
+let itemImage = infoGrandParent.children[0].src
+console.log(itemImage)
+let itemName = infoParent.children[0].innerText
+let itemPrice = infoParent.children[1].innerText
 
-let btn = event.target
+itemContainer.innerHTML = `
 
-let btnGrandParent = btn.parentElement.parentElement
-
-let btnParent = btn.parentElement
-
-let itemImage = btnGrandParent.children[0].src
-
-let itemName = btnParent.children[0].innerText
-
-let itemPrice = btnParent.children[1].innerText
-
-//Aqui le agrego el HTML al elemento 'tr' que creé.
-    itemContainer.innerHTML = `
-    <td><input class="uk-checkbox" type="checkbox"></td>
-    <td><img class="uk-preserve-width uk-border-circle" src=${itemImage} width="40" alt=""></td>
-    <td class="uk-table-link">
-    <h3 class ="item-name">${itemName}</h3></td>
-    <td class="uk-text-truncate item-price"><h3>${itemPrice}</h3></td>
-    <td><input type = 'number' class = 'num' value = '1'></td>
-    <td class="uk-text-truncate total-price"><h3>${itemPrice}</h3></td>
-    <td><button class="uk-button uk-button-danger" type="button">Remove</button></td>
+<td><input class="uk-checkbox" type="checkbox"></td>
+<td><img class="uk-preserve-width uk-border-circle" src=${itemImage} width="40" alt=""></td>
+<td class="uk-table-link">
+    <h3 class = "item-name">${itemName}</h3>
+</td>
+<td class="uk-text-truncate item-price">${itemPrice}</td>
+<td><input type = 'number' class = 'num' value = '1'></td>
+<td class="uk-text-truncate total-price">${itemPrice}</td>
+<td><button class="uk-button uk-button-danger" type="button">Eliminar</button></td>
 `
-//Aqui lo agrego directamente a la seccion del carrito
 cartContainer.append(itemContainer)
-}
 
+const product = {
+    key: itemName,
+    name: itemName,
+    price: itemPrice
+}
+localStorage.setItem(product.key, JSON.stringify(product));
+}
