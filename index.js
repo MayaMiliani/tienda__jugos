@@ -49,6 +49,9 @@ itemContainer.innerHTML = `
     }
     localStorage.setItem(product.key, JSON.stringify(product));
 
+  
+
+
 
 for(let i = 0; i < quantityFields.length; i++){
     quantityFields[i].value = 1
@@ -105,3 +108,6 @@ function removeItem(event){
     grandTotal()
     
 }
+
+
+

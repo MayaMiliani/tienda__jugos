@@ -1,3 +1,4 @@
+  
 
 
 *,
@@ -79,7 +80,8 @@ h3 {
     font-size: 4rem;
     color:gray;
     font-weight: 500;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Otomanopee One', sans-serif;
+    
 }
 
 .cart svg {
@@ -100,6 +102,7 @@ h3 {
     display: flex;
     justify-content: space-between;
     background-color: mistyrose;
+    font-family: 'Otomanopee One', sans-serif;
 
 }
 
@@ -111,7 +114,7 @@ h3 {
 
 .nav__list {
     display: flex;
-    width: 70%;
+    width: 80%;
     padding:20px;
     
     
@@ -240,7 +243,7 @@ h3 {
     color: #4a1667;
     font-size: 7rem;
     margin-bottom: 1.6rem;
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Otomanopee One', sans-serif;
 }
 
 .hero__left p {
@@ -718,4 +721,20 @@ uk-button uk-button-ganger{
     
 
 
+}
+.uk-border-circle{
+    width: 100px !important;
+    height: 100px !important;
+}
+.fa-cart-arrow-down{
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+.sty{
+    font-size: 18px !important;
+    color: black !important;
+    font-family: 'Otomanopee One', sans-serif;
 }
